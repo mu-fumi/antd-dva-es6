@@ -1,0 +1,28 @@
+@import '../../../styles/vars.less';
+
+.modal-style {
+  :global {
+    .text-ellipsis-1{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    .ant-modal-body{
+      padding:@gutter-base * 2 @gutter-base * 4;
+    }
+    .ant-modal-footer{
+      padding:10px @gutter-base * 2;
+    }
+  }
+}
+:global{
+  .tooltip-style{
+    max-width: 500px;
+    word-wrap: break-word;
+    max-height: @gutter-base * 50;
+    overflow-y: scroll;
+  }
+}
+
+

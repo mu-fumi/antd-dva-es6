@@ -1,0 +1,33 @@
+@import "../../../styles/vars.less";
+
+.setting-modal{
+  .item{
+    margin-bottom: @gutter-base * 2;
+  }
+  .name-item{
+    height: 32px;
+    line-height: 32px;
+  }
+  .mgt-8{
+    margin-bottom: @gutter-base;
+  }
+  .mgr-offset-1{
+    margin-right: 2%;
+  }
+  .schedule{
+    width: calc(~'91% + 1px');
+    margin-top: @gutter-base;
+  }
+  .gutter-base{
+    margin-top: @gutter-base;
+  }
+}
+.has-error{
+  border-color : @error-color;
+  &:hover{
+    border-color : @error-color !important;
+  }
+  &:focus{
+    border-color : @error-color !important;
+  }
+}

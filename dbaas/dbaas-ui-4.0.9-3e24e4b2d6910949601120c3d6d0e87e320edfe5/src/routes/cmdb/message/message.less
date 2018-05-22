@@ -1,0 +1,25 @@
+@import "../../../styles/vars";
+.message{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+      }
+      .min-w-80{
+        min-width: 80px;
+      }
+      .min-w-180{
+        min-width: 180px;
+      }
+      .newtext{
+        padding-left: 5px;
+      }
+    }
+  }
+}
+:global .font-20{
+  font-size:20px;
+}

@@ -1,0 +1,29 @@
+@import "../../styles/vars.less";
+
+.filter-form{
+  //min-width: 1400px;  //  还是换行吧。。不然显示不完全。。
+  :global {
+    .ant-form-item{
+      margin-bottom: 0;
+    }
+    .ant-form-item-control-wrapper{
+      display: inline-block;
+      .ant-calendar-picker {
+        width: 350px!important;   //  为了filter不转行
+        &.w-170{
+          width:170px!important;
+        }
+      }
+      .ant-select {
+        width: 120px!important;    //  为了filter不转行
+      }
+    }
+    .ant-row-flex-middle {
+      align-items: inherit;  //  覆盖默认的center，保持控件的对齐
+    }
+  }
+
+  & [type="button"]{
+    margin-left: @gutter-base;
+  }
+}

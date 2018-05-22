@@ -1,0 +1,18 @@
+@import "../../styles/vars.less";
+
+.time-filter{
+  display: inline-block;
+  span {
+    font-size: @font-size-sm + 1px;
+  }
+  :global .radio{
+    float: left;
+    margin-right: @gutter-base * 2 + 2px;
+  }
+  :global .ant-calendar-picker {
+    width: 330px!important;
+  }
+  :global .ant-calendar-picker-input {
+    padding: @gutter-base - 3px;
+  }
+}

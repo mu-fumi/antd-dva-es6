@@ -1,0 +1,42 @@
+@import "../../../styles/vars.less";
+
+.tagbox {
+  margin-top: @gutter-base;
+  :global .tags {
+    line-height: 30px;
+    .label {
+      line-height: 34px;
+    }
+    span {
+      color: @select-label-color;
+      &.button {
+        color: @primary-color;
+      }
+    }
+    .ant-form-item-label {
+      width: 8%;
+    }
+    .ant-form-item-control-wrapper {
+      width: 92%;
+    }
+    .tag-box {
+      height: @select-height-lg;
+      overflow: hidden;
+      background-color: @component-background;
+      padding: 2px;
+    }
+    .spread {  // 展开状态
+      height: auto;
+    }
+  }
+  :global .unspread {
+    line-height: 40px;
+    text-align: right;
+  }
+  :global .button {
+    color: @primary-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

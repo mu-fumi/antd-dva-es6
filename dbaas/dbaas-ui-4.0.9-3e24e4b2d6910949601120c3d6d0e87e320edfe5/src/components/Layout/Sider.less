@@ -1,0 +1,27 @@
+@import "../../styles/vars.less";
+
+.sider{
+  width: @layout-sider-width;
+  background: #ffffff;
+  border-right: 1px solid @border-color-split;
+  :global{
+    .sider-header{
+      .layout-header();
+      width: @layout-sider-width;
+    }
+    .@{menu-prefix-cls}{
+      &-inline{
+        border-right: none;
+        padding-top: @gutter-base * 3;
+      }
+      &-item{
+        & > a{
+          display: inline-block;
+        }
+        & .anticon{
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}

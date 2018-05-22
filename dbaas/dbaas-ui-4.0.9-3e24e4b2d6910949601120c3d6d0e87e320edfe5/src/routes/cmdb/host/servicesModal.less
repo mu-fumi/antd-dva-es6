@@ -1,0 +1,28 @@
+@import '../../../styles/vars.less';
+
+.modal-style {
+  :global {
+    .text-ellipsis-1{
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    .text-cemter{
+      text-align: center;
+    }
+    .ant-table-thead > tr > th:last-child {
+      text-align: center;
+    }
+  }
+}
+:global{
+  .tooltip-style{
+    max-width: 500px;
+    word-wrap: break-word;
+    max-height: @gutter-base * 50;
+    overflow-y: scroll;
+  }
+}
+
+

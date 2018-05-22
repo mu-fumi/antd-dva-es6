@@ -1,0 +1,6 @@
+{
+  "name": "NodeRunBadge",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./NodeRunBadge.js"
+}

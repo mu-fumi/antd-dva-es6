@@ -1,0 +1,27 @@
+@import "../../styles/vars";
+
+.tips {
+  :global .anticon-bulb {
+    color: @warning-color;
+    margin-right: @gutter-base;
+  }
+  :global .sorter {
+    margin-left: @gutter-base;
+  }
+}
+
+.sql-text {
+  :global .ant-tooltip-inner {
+    cursor: pointer;
+    max-width: 500px;
+  }
+}
+.query-sql {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 300px;
+}
+
+

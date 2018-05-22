@@ -1,0 +1,30 @@
+@import '../../../styles/vars.less';
+
+.modal-style {
+  :global {
+    .content {
+      padding: @gutter-base * 3;
+      border: @border-base;
+      max-height: 600px;
+      overflow: auto;
+    }
+    .ant-modal-body {
+      max-height: 600px;
+      overflow: scroll;
+    }
+    fieldSet {
+      padding: 0.35em 0.75em 0.625em !important;  // 覆盖antd样式
+      border: 1px solid @border-color-split;  // 覆盖antd样式
+      min-width: 100%;  // 防止pre溢出
+      legend {  // 覆盖antd样式
+        display: table;
+        width: auto;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      pre {
+        overflow: auto;  // 防止pre溢出
+      }
+    }
+  }
+}

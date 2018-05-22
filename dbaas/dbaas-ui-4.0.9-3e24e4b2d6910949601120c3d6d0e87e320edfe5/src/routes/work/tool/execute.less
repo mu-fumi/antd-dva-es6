@@ -1,0 +1,25 @@
+@import "../../../styles/vars.less";
+
+.execute {
+  position: relative;
+  :global .debug {
+    margin-top: 10px;
+    margin-left: calc(~"69px - 2/24*100%");
+    .button-wrapper {
+      width: 9%;
+      //text-align: right;
+      margin-left: calc(~"2/24*100% - 69px");
+    }
+    button {
+      margin: 0 0 @gutter-base * 3 0;
+    }
+    .ok-button {
+      width: 80px;
+    }
+  }
+  :global .return-button {
+    position: absolute;
+    top: @gutter-base * 2;
+    right: @gutter-base * 2;
+  }
+}

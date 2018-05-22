@@ -1,0 +1,23 @@
+@import "../../../styles/vars";
+
+.tab {
+  margin-left: 24px;
+  padding: @gutter-base;
+  background-color: #fff;
+  :global .ant-card:hover {
+    box-shadow: none;
+  }
+  :global .ant-table-wrapper {
+    padding: @gutter-base * 2;
+    :global .ant-table-tbody>tr:hover>td {
+      cursor: pointer;
+    }
+  }
+  :global .anticon-bulb {
+    color: @warning-color;
+    margin-right: @gutter-base;
+  }
+  :global .sorter {
+    margin-left: @gutter-base;
+  }
+}

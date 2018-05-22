@@ -1,0 +1,14 @@
+@import "../../styles/vars";
+.edit{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .inner-row{
+        min-height:@gutter-base * 5;
+        margin-bottom:@gutter-base * 4;
+        border-bottom:@border-width-base @border-style-base @border-color-base;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../styles/vars";
+
+@exec-icon-font-size: @font-size-base + 5pxv;
+
+.slowlog{
+  :global{
+    .panel {
+      margin-left: @gutter-base * 2!important; // 覆盖gutter产生的 margin-left: -8px
+    }
+    .explain-title{
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    h3{
+      display: inline-block;
+    }
+    .sql-text {
+      cursor: pointer;
+    }
+    .exec-icon {
+      font-size: @exec-icon-font-size;
+      line-height: @exec-icon-font-size * 2;
+      color: @heading-color;  // 可执行profiling时按钮颜色
+      cursor: pointer;
+    }
+    .no-permission {
+      color: @text-color-secondary;  // 不可执行profiling时按钮颜色
+    }
+  }
+}

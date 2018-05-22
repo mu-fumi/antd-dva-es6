@@ -1,0 +1,6 @@
+{
+  "name": "Clipboard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Clipboard.js"
+}

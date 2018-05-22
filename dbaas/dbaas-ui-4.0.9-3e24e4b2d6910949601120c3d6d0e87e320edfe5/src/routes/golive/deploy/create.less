@@ -1,0 +1,227 @@
+@import '../../../styles/vars';
+
+.create{
+  margin-top : @gutter-base;
+  :global{
+    .ant-table-pagination{
+      margin : @gutter-base * 2 0 0 0;
+    }
+  }
+}
+
+.mgt-16{
+  margin-top : @gutter-base * 2;
+}
+.host-input{
+  :global{
+    .ant-input-group {
+      width: auto;
+    }
+    .ant-input {
+      height: 36px; // antd3取消了input size=large的默认值，这里补上
+    }
+    .ant-input-group-addon{
+      padding : 0 !important;
+    }
+  }
+  .cursor-pointer{
+    cursor: pointer;
+    padding : @gutter-base / 2 @gutter-base;
+    line-height: 1.8;
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.mgt-8{
+  margin-top : @gutter-base;
+}
+.mgtb-8{
+  margin : @gutter-base 0;
+}
+.mgl-8{
+  margin-left : @gutter-base;
+}
+.info-tip{
+  margin : 0 0 @gutter-base * 2 0;
+}
+
+.config-form{
+  :global{
+    .ant-input{
+      width : 186px;
+    }
+    .ant-input-group .ant-input{
+      width : 100%
+    }
+  }
+
+}
+.overwrite-collapse{
+  :global{
+    .ant-collapse{
+      border : none;
+      .ant-collapse-item{
+        border : none;
+      }
+    }
+    .ant-collapse-header{
+      width: 16.67%;
+      text-align: right;
+      .arrow {
+        //此处用 left 是为了覆盖 antd 的样式
+        left : calc(~"100% - @{font-size-base} * 6.5") !important;
+      }
+    }
+    .ant-collapse-content{
+      padding : 0;
+    }
+  }
+}
+.font-bold{
+  font-weight : bold;
+}
+
+.checkboxGroup{
+  :global{
+    .ant-checkbox{
+      top : -2px;
+    }
+  }
+}
+
+.host-component{
+  .bg-success{
+    :global{
+      .ant-progress-bg{
+        background-color : @success-color
+      }
+      .ant-progress-text{
+        color : @success-color
+      }
+    }
+  }
+  .bg-primary{
+    :global{
+      .ant-progress-bg{
+        background-color : @primary-color
+      }
+      .ant-progress-text{
+        color : @primary-color
+      }
+    }
+  }
+  .bg-warning{
+    :global{
+      .ant-progress-bg{
+        background-color : @warning-color
+      }
+      .ant-progress-text{
+        color : @warning-color
+      }
+    }
+  }
+  .bg-error{
+    :global{
+      .ant-progress-bg{
+        background-color : @error-color
+      }
+      .ant-progress-text{
+        color : @error-color
+      }
+    }
+  }
+  :global{
+    .ant-progress-inner{
+      overflow: hidden;
+    }
+  }
+}
+
+.host{
+  :global {
+    .ant-table-thead > tr > th {
+      //text-align: center;
+    }
+  }
+  .tip-container{
+    padding : @gutter-base / 2 @gutter-base;
+    border : 1px solid @blue-4;
+    border-radius : @gutter-base / 2;
+    background-color : @blue-2;
+  }
+}
+.config-table{
+  padding : 0 !important;
+  :global{
+    .ant-table-bordered .ant-table-thead>tr>th:last-child,.ant-table-bordered .ant-table-tbody > tr > td:last-child{
+      border-right : 0;
+    }
+    .ant-table-small{
+      border : 0 !important;
+    }
+    ant-table-placeholder{
+      border-right : 0 !important;
+    }
+  }
+}
+.break-word{
+  word-break: break-word !important;
+}
+.txt-c-table{
+  :global{
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+      text-align: center;
+    }
+  }
+}
+
+.machine-modal {
+  :global .filter {
+    margin-bottom: @gutter-base * 2;
+  }
+  :global .hide-column {
+    display: none;
+  }
+}
+.settingModal{
+  :global .to-default {
+    position: absolute;
+    bottom: @gutter-base + 2px;
+    left: @gutter-base * 2 + 18px;
+  }
+}
+.txt-r{
+  text-align: right;
+}
+
+.max-400{
+  max-width : 400px;
+}
+
+.button-row{
+  margin-top : @gutter-base * 2;
+}
+
+.chunkConfig{
+  .chunkItem{
+    margin-top: @gutter-base * 2;
+  }
+  .chunkItem-content{
+    padding-top: @gutter-base * 2;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px dashed @border-color-base;
+    width: calc(~"100% - 40px");
+    border-radius: 4px;
+  }
+  .chunkItem-icon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    font-size: @font-size-base * 2;
+    margin-left: @gutter-base;
+    color: @error-color;
+    cursor: pointer;
+  }
+}

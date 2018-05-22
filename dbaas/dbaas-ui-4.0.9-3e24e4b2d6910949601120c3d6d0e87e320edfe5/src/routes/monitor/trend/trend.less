@@ -1,0 +1,162 @@
+@import "../../../styles/vars.less";
+
+.trend {
+  margin: -@gutter-base * 3;
+  background: @background-color-base;
+  :global .search-box {
+    padding: 0 @gutter-base * 3;
+    background: @component-background;
+    margin-bottom: @gutter-base * 3;
+    .search {
+      padding-top: @gutter-base * 3;
+      width: 100%;
+      .ant-form-item-label {
+        width: 1/6*100%;
+      }
+      .ant-form-item-control-wrapper {
+        width: 5/6*100%;
+      }
+      .keyword {
+        .ant-form-item {
+          margin-bottom: 0;
+        }
+        .ant-form-item-label {
+          width: 23%;
+        }
+        .ant-form-item-control-wrapper {
+          width: 77%;
+          .ant-form-item-control {
+            margin-bottom: 0;
+            line-height: 1;
+          }
+        }
+      }
+      .simple-search {
+        button {
+          margin-right: @gutter-base * 2;
+        }
+      }
+      .search-bar {
+        margin-bottom: @gutter-base * 3;
+        button {
+          margin-left: @gutter-base * 2;
+        }
+      }
+      .select-group {
+        //padding-left: calc(~"1/12*100% - 60px");   //  跟上排对齐
+        .select-type {
+          float: left;
+          width: 30%;
+          .ant-form-item-control-wrapper {
+            width: 83%;
+          }
+          .star {
+            display: inline-block;
+            //margin-right: 4px;
+            content: "*";
+            font-family: SimSun;
+            line-height: 1;
+            font-size: @font-size-base;
+            color: #f04134;
+          }
+          .ant-form-item-label label:after {
+            content: "";
+          }
+          .ant-select {
+            width: 100%;
+          }
+        }
+        .select-content {
+          float: left;
+          width: calc(~"70% + 3px");
+          margin-left: -3px;  // 让两个框重合
+          .ant-form-item-control-wrapper {
+            width: 100%;
+            .ant-select {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .complex-node {
+        width: calc(~"7/24*100%");  // 不固定宽度，换行不好看
+        display: inline-block;  //  加上这个min-width才生效，且才不会因为上面的col浮动而遮住上面的col
+        //min-width: calc(~"7/24*100%");
+        //max-width: 100%;
+        //.ant-form-item-label {
+        //  width: auto;
+        //}
+        //.ant-form-item-control {
+        //  width: auto;
+        //}
+      }
+      .ant-tag {
+        font-size: @font-size-base;
+      }
+    }
+    .float-element {
+      margin-bottom: @gutter-base * 2;
+      overflow: hidden;
+      .selected-node-label {
+        float: left;
+      }
+      .selected-nodes {
+        float: left;
+        width: calc(~"100% - 70px");
+        border: @table-border-dotted;
+        padding: @gutter-base * 2;
+        .ant-tag {
+          border: none;
+        }
+      }
+      .monitor-item-label {
+        float: left;
+      }
+      .monitor-items {
+        float: left;
+        width: calc(~"100% - 56px");
+        border: @table-border-dotted;
+        padding: @gutter-base;
+        hr {
+          height: 1px;
+          border: none;
+          border-top: @table-border-dotted;
+        }
+      }
+    }
+  }
+  :global .pagination {
+    margin-top: @gutter-base * 2;
+    text-align: center;
+    .ant-pagination {
+      float: right;
+    }
+    span {
+      color: @text-color-secondary;
+    }
+  }
+}
+
+.chart{
+  width: 100%;
+  :global {
+    .ant-select {  //  chart中的select
+      width: 90%;
+      .ant-select-selection {
+        height: auto;
+        .ant-select-selection__rendered {
+          font-size: 10px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {   //  因为名字太长，小于1320px时，图例scroll不正常
+  .chart {
+    :global .ant-col-12 {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../styles/vars.less";
+
+.tool {
+	:global .tags{
+		margin-top: @gutter-base * 2;
+	}
+	:global .title {
+		margin: @gutter-base * 3 0;
+		font-size: @font-size-base;
+		font-weight: 600;
+	}
+  :global .no-tool {
+    margin: 20px;
+  }
+	:global .tool-item {
+		float: left;
+		width: 120px;
+    height: 120px;
+		& .link {
+			display: block;
+			width: 100px;
+      padding: 5px;
+      &:hover {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+        border-radius: 2.4px;
+        background-color: @component-background;
+        text-decoration: none;
+			}
+		}
+		& .icon-group {
+			position: relative;
+			text-align: center;
+			& .bg-icon {
+				font-size: @avatar-size-base * 2;
+				color: #4bd126;
+			}
+			& .tool-icon {
+				position: absolute;
+				top: @gutter-base * 2;
+				left: @gutter-base * 4 - 2px;
+				font-size: @avatar-size-base;
+				color: #fff;
+			}
+		}
+		& .tool-name {
+			margin: 5px;
+			color: #000;
+			text-align: center;
+			overflow: visible;
+		    white-space: normal;
+		    word-break: break-all;
+		}
+	}
+}

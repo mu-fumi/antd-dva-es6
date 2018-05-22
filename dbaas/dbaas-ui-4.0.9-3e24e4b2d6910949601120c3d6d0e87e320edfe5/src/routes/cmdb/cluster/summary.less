@@ -1,0 +1,141 @@
+@import '../../../styles/vars.less';
+
+@border-color : #cbd2db;
+
+.title{
+  border : 1px solid @border-color;
+  border-bottom: 0;
+  padding : @gutter-base / 2 @gutter-base ;
+  font-size : @font-size-base + 2px;
+}
+
+.mgt-32{
+  margin-top : @gutter-base * 4;
+}
+
+.circle{
+  display: inline-block;
+  width: @gutter-base ;
+  height: @gutter-base ;
+  border-radius: 50%;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.bg-success{
+  background-color: @success-color;
+}
+
+.bg-error{
+  background-color: @error-color;
+}
+
+.bg-warning{
+  background-color: @warning-color;
+}
+
+.info{
+  :global{
+    .ant-table th, .ant-table td{
+      padding : @gutter-base / 2 @gutter-base !important;
+    }
+    .ant-table-thead > tr > th{
+      color : rgba(0,0,0,0.65);
+      font-weight:normal;
+    }
+    .ant-table-small .ant-table-title{
+      padding : @gutter-base - 2px @gutter-base;
+    }
+  }
+  .lh-26{
+    line-height: 26px;
+  }
+}
+.pwd-btn{
+  margin-left: @gutter-base * 2;
+}
+
+.mgt-8{
+  margin-top : @gutter-base;
+}
+
+.summary{
+  margin-top : @gutter-base * 1.5;
+}
+
+.mgt-16{
+  margin-top : @gutter-base * 2;
+}
+.mgt-24{
+  margin-top : @gutter-base * 3;
+}
+
+.txt-c{
+  text-align: center !important;
+}
+
+.graph{
+  border : 1px solid @border-color;
+  .pd-8{
+    padding : @gutter-base / 2 @gutter-base;
+    border-bottom : 1px solid @border-color;
+  }
+  //.jsPlumb{
+  //  width : 100%;
+  //  height: 400px;
+  //}
+  //针对 graph.js
+  .container{
+    position: relative;
+    height: 500px;
+    .rect-blue{
+      padding : 0 @gutter-base/ 2;
+      background-color : @primary-color;
+      border-radius : @gutter-base / 2 + 1;
+      color : #fff;
+    }
+    .rect-grey{
+      padding : 0 @gutter-base/ 2;
+      background-color: @grey-3;
+      border-radius : @gutter-base / 2 + 1;
+    }
+    .mg-icon{
+      margin-left : @gutter-base / 2;
+      margin-right : @gutter-base * 2;
+    }
+  }
+  .tooltip{
+    position: absolute;
+    background-color : @tooltip-bg;
+    max-width : 250px;
+    color : @tooltip-color;
+    padding : @gutter-base;
+    transform : translate(-50%, -100%);
+
+    &::after{
+      border : @tooltip-arrow-width solid transparent;
+      border-top-color :@tooltip-bg ;
+      width : 0;
+      height : 0;
+      position: absolute;
+      left : 50%;
+      top : 100%;
+      transform : translate( -@tooltip-arrow-width / 2, 0);
+      content : '';
+    }
+  }
+}
+
+.clear-float:after{
+  display: table;
+  clear : both;
+  content : '';
+}
+.mem-progress{
+  display: inline-block;
+  width : calc(~"85% - @{font-size-base} * 8");
+  max-width : 250px;
+  min-width : 50px;
+}

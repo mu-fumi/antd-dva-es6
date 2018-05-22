@@ -1,0 +1,21 @@
+@import "../../styles/vars.less";
+
+.jsPlumb-container {
+  position: relative;
+  background-color: #fff;
+
+  :global{
+    .display-none{
+      display: none;
+    }
+    .jsPlumb-node {
+       position: absolute;
+       display: inline-block;
+       text-align: center;
+       -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+       border-radius: 10px;
+     }
+  }
+}
+

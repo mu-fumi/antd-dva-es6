@@ -1,0 +1,13 @@
+@import "../../../styles/vars.less";
+
+.anomaly {
+  .filter-container {
+    margin-top: 12px;
+    margin-bottom: @gutter-base * 2;
+  }
+  :global {
+    .ant-form .ant-form-item-control-wrapper .ant-select { // 覆盖默认宽度
+      width: 200px!important;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../../styles/vars';
+
+.mgtb-8{
+  margin-bottom : @gutter-base;
+  margin-top : @gutter-base;
+}
+.mgt-8{
+  margin-top : @gutter-base;
+}
+.mgt-16{
+  margin-top : @gutter-base * 2;
+}
+.mgt-32{
+  margin-top : @gutter-base * 4;
+}
+.font-bold{
+  font-weight : bold;
+}
+.host{
+  :global {
+    .ant-table-thead > tr > th {
+      text-align: center;
+    }
+  }
+  .bg-success{
+    :global{
+      .ant-progress-bg{
+        background-color : @success-color
+      }
+      .ant-progress-text{
+        color : @success-color
+      }
+    }
+  }
+  .bg-primary{
+    :global{
+      .ant-progress-bg{
+        background-color : @primary-color
+      }
+      .ant-progress-text{
+        color : @primary-color
+      }
+    }
+  }
+  .bg-warning{
+    :global{
+      .ant-progress-bg{
+        background-color : @warning-color
+      }
+      .ant-progress-text{
+        color : @warning-color
+      }
+    }
+  }
+  .bg-error{
+    :global{
+      .ant-progress-bg{
+        background-color : @error-color
+      }
+      .ant-progress-text{
+        color : @error-color
+      }
+    }
+  }
+  .tip-container{
+    padding : @gutter-base / 2 @gutter-base;
+    border : 1px solid @blue-4;
+    border-radius : @gutter-base / 2;
+    background-color : @blue-2;
+  }
+}
+.baseInfo{
+  .relateLabel{
+    width : 80px;
+    display: inline-block !important;
+  }
+  :global{
+    .ant-col-14 .ant-select{
+       width : 260px;
+    }
+    .ant-input-group .ant-select:first-child{
+      width : 85px;
+    }
+    .ant-input-group .ant-select:last-child{
+      width : 175px;
+    }
+  }
+}
+.config-table{
+  padding : 0 !important;
+  :global{
+    .ant-table-bordered .ant-table-thead>tr>th:last-child,.ant-table-bordered .ant-table-tbody > tr > td:last-child{
+      border-right : 0;
+    }
+    .ant-table-small{
+      border : 0 !important;
+    }
+    ant-table-placeholder{
+      border-right : 0 !important;
+    }
+  }
+}
+.overflow-hidden{
+  overflow: hidden;
+  line-height: inherit;  //  抵消antd3中ant-checkbox-group的line-height 1.5
+}
+.button-row{
+  margin-top : @gutter-base * 2;
+}
+.add{
+  :global{
+    .ant-table-pagination{
+      margin : @gutter-base * 2 0 0 0;
+    }
+  }
+}

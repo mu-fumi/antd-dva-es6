@@ -1,0 +1,101 @@
+@import "../../../styles/vars";
+.modify{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+        border-bottom: @border-width-base @border-style-base @border-color-base;
+      }
+    }
+  }
+  .changeConfigs{
+    :global{
+      .mgt-16{
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      .mgrt-24{
+        margin-top: 24px;
+      }
+    }
+  }
+  .chooseConfigs{
+    :global{
+      .ant-form-item{
+        margin-bottom: 0;
+      }
+      .ant-input-number{
+        width: 105px;
+      }
+      .ant-card-head{
+        background: #f4f7f9;
+      }
+      .mgrt-24{
+        margin-top: 24px;
+        .card-margin{
+          margin:0 16px 30px 16px;
+          .row-title{
+            text-align:center;
+            font-weight:bold;
+            margin-bottom:16px;
+          }
+          .row-cont{
+            height:50px;
+            line-height:50px;
+            .col-7-style{
+              overflow:hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap;
+              height:50px;
+              line-height:50px;
+              padding-right:16px;
+              .text-ellipsis-1{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+                text-decoration: none;
+              }
+            }
+            .col-6-style{
+              text-align:center;
+              padding-right:16px;
+                .text-ellipsis-1{
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  display: block;
+                  text-decoration: none;
+                }
+            }
+            .col-11-style{
+              padding-right:16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .configsSummary{
+    :global{
+      .text-ellipsis-1{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+    }
+  }
+}
+:global{
+  .tooltip-style{
+    max-width: 500px;
+    word-wrap: break-word;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+}
+

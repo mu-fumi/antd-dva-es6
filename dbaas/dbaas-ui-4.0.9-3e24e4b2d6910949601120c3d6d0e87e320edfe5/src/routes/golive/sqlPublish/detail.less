@@ -1,0 +1,48 @@
+@import "../../../styles/vars.less";
+
+@collapse-background-color: #f8f8f8;
+
+.detail {
+  :global {
+    .collapse {  // output为空时不展开折叠面板
+      &.ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow,
+      .ant-collapse-content > .ant-collapse-content-box {
+        display: none;
+      }
+    }
+    .header {
+      font-size: @font-size-sm;
+      margin: 0 @gutter-base * 2 @gutter-base * 2 0;
+      background: @collapse-background-color;
+      border-radius: @border-radius-base;
+      color: @text-color;
+      .title {
+        font-size: @font-size-base;
+        color: @heading-color;
+      }
+      .consuming {
+        vertical-align: top;
+        background: @collapse-background-color;
+        margin-top: -3px;
+        float: right;
+      }
+      .created-time {
+        display: block;
+      }
+      .detail {
+        margin: @gutter-base 0;
+      }
+    }
+    .pagination {
+      margin-top: @gutter-base * 2;
+      text-align: center;
+      .ant-pagination {
+        float: right;
+        padding-bottom: @gutter-base * 2;
+      }
+      span {
+        color: @text-color-secondary;
+      }
+    }
+  }
+}

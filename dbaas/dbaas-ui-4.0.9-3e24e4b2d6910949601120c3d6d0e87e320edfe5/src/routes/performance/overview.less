@@ -1,0 +1,59 @@
+@import "../../styles/vars.less";
+
+@progress-prefix-cls: ~"@{ant-prefix}-progress";
+
+@progressNum : 40px;
+
+.overview {
+  .current-load {
+      :global {
+        .ant-card-body{
+          overflow-x: scroll;
+          .ant-row-flex-space-between{
+            min-width: 1440px;
+            .ant-col-4{
+              padding-left:0!important;
+              padding-right:0!important;
+              .chart {
+                //min-width: 275px;
+              }
+            }
+          }
+        }
+    }
+  }
+  .top {
+    :global {
+      .@{progress-prefix-cls} {
+        &-show-info {
+          .@{progress-prefix-cls}-outer {
+            padding-right: 45px;
+            margin-right: -50px;
+          }
+        }
+        &-text {
+          width: 40px;
+        }
+      }
+    }
+  }
+  .progress-bar{
+    display: inline-block;
+    width : calc( ~"100% - @{progressNum}" );
+  }
+  .progress-number{
+    display: inline-block;
+    width: @progressNum;
+  }
+  :global .nic-bandwidth {
+    margin-left: @gutter-base;
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+  }
+}
+
+.sql-text {
+  :global .ant-tooltip-inner {
+    cursor: pointer;
+  }
+}

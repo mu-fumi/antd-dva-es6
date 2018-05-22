@@ -1,0 +1,54 @@
+@import "../../styles/vars";
+
+.panel {
+  border: @table-border-solid;
+
+  :global {
+    .ant-input {
+      border: none;
+      border-radius: 0;
+    }
+    .collapse {
+      background-color: @background-color-base;
+      border-radius: 0;
+      border-top: @table-border-solid;
+    }
+    .collapse>.collapse-item {
+      //border-bottom: 1px solid #d9d9d9;
+    }
+    .collapse>.collapse-item>.collapse-header {
+      height: 38px;
+      line-height: 38px;
+      padding-left: @gutter-base * 2;
+      color: rgba(0,0,0,.85);
+      position: relative;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+    .collapse-content-inactive {
+      display: none;
+    }
+    .collapse-content {
+      overflow: hidden;
+      color: rgba(0,0,0,.65);
+      padding: 0 @gutter-base * 2;
+      background-color: #fff;
+    }
+    .collapse-content>.collapse-content-box {
+      padding-top: @gutter-base * 2;
+      padding-bottom: @gutter-base * 2;
+    }
+    .collapse .exec-icon {
+      font-size: 19px;
+      line-height: 38px;
+      color: #666;
+      cursor: pointer;
+    }
+    .profiling-sql {
+      min-height: 80px;
+      padding: 10px;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+  }
+}

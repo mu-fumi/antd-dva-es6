@@ -1,0 +1,82 @@
+@import "../../styles/vars";
+.fileManage{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+        border-bottom: @border-width-base @border-style-base @border-color-base;
+      }
+      .asTable{
+        height:52px;
+        background-color:#efefef;
+        padding:12px 20px;
+        line-height:28px;
+          .icon-style{
+            width: @gutter-base * 4;
+            height:26px;
+            background-color:@body-background;
+            float:right;
+            text-align:center;
+            border:solid 1px #bdbdbd;
+            font-size:15px;
+          }
+          .icon-style:hover{
+            cursor:pointer;
+            background-color: #f4f4f4;
+          }
+          .icon-style-del{
+            width:@gutter-base * 4;
+            height:26px;
+            background-color:#fff;
+            float:right;
+            text-align:center;
+            border:solid 1px #bdbdbd;
+            margin-left: 15px;
+            font-size:15px;
+            .icon-color{
+              color:#e14c4c;
+            }
+          }
+          .icon-style-del:hover{
+            cursor:pointer;
+            background-color: #e14c4c;
+            .icon-color{
+              color:#fff;
+            }
+          }
+        .size-span{
+          float:right;
+          margin-right:15px;
+        }
+      }
+      .binary-content{
+        padding:15px;
+        border: solid 1px #efefef;
+        .binary-inner{
+          background-color: #fcf8f2;
+          border-color: #ff8c19;
+          margin: 20px 0;
+          padding: 20px;
+          border-left: 3px solid #ff8c19;
+          .binary-font{
+            color:#0FACF3;
+            font-size: 15px;
+          }
+          .binary-font:hover{
+            cursor:pointer;
+          }
+        }
+      }
+    }
+    .CodeMirror{
+      height:550px!important;
+      font-family: Consolas,'Liberation Mono',Menlo,Courier,monospace!important;
+      font-size: 13px!important;
+      line-height: 20px!important;
+      border: 1px solid transparent!important;
+    }
+  }
+}

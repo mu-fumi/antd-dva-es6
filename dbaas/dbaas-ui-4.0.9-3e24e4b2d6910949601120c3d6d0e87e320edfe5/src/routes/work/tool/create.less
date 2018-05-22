@@ -1,0 +1,54 @@
+@import "../../../styles/vars.less";
+
+.create {
+  position: relative;
+  :global .tool-tip{
+    margin-bottom: @gutter-base * 2;
+    margin-left: 2%;
+    font-size: @font-size-sm;
+    .anticon {
+      color: @warning-color;
+      margin-right: @gutter-base;
+    }
+  }
+  :global .star {
+    display: inline-block;
+    margin-right: @gutter-base / 2;
+    content: "*";
+    font-family: SimSun;
+    line-height: 1;
+    font-size: @font-size-sm;
+    color: #f04134;
+  }
+  :global .code-mirror {
+    height: auto;
+    border: 1px solid #e1e1e1;
+    border-radius: @border-radius-base;
+    font-family: Consolas,'Liberation Mono',Menlo,Courier,monospace;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  :global .ok-button {  // 基本信息页确定按钮
+    margin-left: calc(~"1/7*100% - 70px");
+    padding: 0 35px;
+  }
+  :global hr {
+    margin-bottom: 20px;
+    margin-left: calc(~"2/24*100% - 69px");
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+  :global .debug {
+    button {
+      margin: 0 0 @gutter-base * 3 calc(~"2/24*100% - 69px");
+    }
+    .ok-button { // 调试页确定按钮, 宽度跟上面两个按钮相同
+      width: 109px;
+    }
+  }
+  :global .return-button {
+    position: absolute;
+    top: @gutter-base * 2;
+    right: @gutter-base * 2;
+  }
+}

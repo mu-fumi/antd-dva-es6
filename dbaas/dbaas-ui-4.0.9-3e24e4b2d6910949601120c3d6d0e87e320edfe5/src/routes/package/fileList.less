@@ -1,0 +1,55 @@
+@import "../../styles/vars";
+.fileList{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+        border-bottom: @border-width-base @border-style-base @border-color-base;
+      }
+    }
+  }
+}
+.asTable{
+  height:52px;
+  background-color:#efefef;
+  padding:12px 20px;
+  line-height:28px;
+  :global{
+    .icon-style{
+      width:32px;
+      height:26px;
+      background-color:#fff;
+      float:right;
+      text-align:center;
+      border:solid 1px #bdbdbd;
+      font-size:15px;
+    }
+    .icon-style:hover{
+      cursor:pointer;
+      background-color: #f4f4f4;
+    }
+    .icon-style-del{
+      width:32px;
+      height:26px;
+      background-color:@body-background;
+      float:right;
+      text-align:center;
+      border:solid 1px #bdbdbd;
+      margin-left: 15px;
+      font-size:15px;
+      .icon-color{
+        color:#e14c4c;
+      }
+    }
+    .icon-style-del:hover{
+      cursor:pointer;
+      background-color: #e14c4c;
+      .icon-color{
+        color:@body-background;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "entry": "src/index.js",
+  "disableCSSModules": false,
+  "publicPath": "/",
+  "multipage": false,
+  "theme": "src/styles/theme.js",
+  "autoprefixer": null,
+  "proxy": {
+    "/api/v2": {
+      "target": "http://172.16.17.30:8002/api/v2/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api/v2" : "" }
+    }
+  },
+  "extraBabelPlugins": [
+    "transform-runtime",
+    "add-module-exports",
+    "transform-decorators-legacy",
+    ["import", { "libraryName": "antd", "libraryDirectory": "lib", "style": true }],
+    ["module-resolver", {
+          "root": ["./src"],
+          "alias": {
+            "test": "./test",
+            "containers": "containers",
+            "models": "models",
+            "routes": "routes",
+            "services": "services",
+            "utils": "utils",
+            "assets": "assets",
+            "styles": "styles"
+          }
+        }]
+  ],
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime"
+      ],
+      "devtool": "eval-source-map"
+    },
+    "test": {
+          "plugins": [ "istanbul" ]
+    }
+  }
+}

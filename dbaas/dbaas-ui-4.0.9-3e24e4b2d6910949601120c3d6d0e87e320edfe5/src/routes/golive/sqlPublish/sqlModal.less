@@ -1,0 +1,34 @@
+@import '../../../styles/vars.less';
+
+.sql-modal {
+  :global {
+    .content {
+      padding: @gutter-base * 3;
+      border: @border-base;
+      max-height: 600px;
+      overflow: auto;
+    }
+    .ant-modal-body {
+      min-height: 100px;
+      max-height: 600px;
+      overflow: auto;  //  scroll在火狐，未overflow的时候也会出现滚动条
+    }
+    //fieldSet {
+    //  padding: 0.35em 0.75em 0.625em !important;  // 覆盖antd样式
+    //  border: 1px solid @border-color-split;  // 覆盖antd样式
+    //  min-width: 100%;  // 防止pre溢出
+    //  legend {  // 覆盖antd样式
+    //    display: table;
+    //    width: auto;
+    //    margin-bottom: 0;
+    //    border-bottom: none;
+    //  }
+    //  pre {
+    //    overflow: auto;  // 防止pre溢出
+    //  }
+    //}
+    pre {
+      overflow: inherit;
+    }
+  }
+}

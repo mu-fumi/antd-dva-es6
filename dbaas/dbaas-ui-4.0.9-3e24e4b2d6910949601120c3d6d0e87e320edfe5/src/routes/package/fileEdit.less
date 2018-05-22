@@ -1,0 +1,63 @@
+@import "../../styles/vars";
+.fileEdit{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+        border-bottom:  @border-width-base @border-style-base @border-color-base;
+      }
+      .asTable{
+        //height:52px;
+        background-color:#efefef;
+        padding:12px 20px;
+        line-height:28px;
+        .text-cancel{
+          color:#2db7f5;
+          margin-left: 10px;
+        }
+        .text-cancel:hover{
+          cursor:pointer;
+          text-decoration: underline;
+        }
+      }
+      .binary-content{
+        padding:15px;
+        border: solid 1px #efefef;
+        .binary-inner{
+          background-color: #fcf8f2;
+          border-color: #ff8c19;
+          margin: 20px 0;
+          padding: 20px;
+          border-left: 3px solid #ff8c19;
+        }
+      }
+    }
+    .ant-form-explain{
+      width: 400px;
+    }
+  }
+  :global{
+      .ant-form-item{
+        margin-bottom: 0;
+        display: inline-block;
+      }
+      .ant-form-item-control {
+        line-height: 28px;
+      }
+      .ant-input-lg{
+        height:28px;
+      }
+    .CodeMirror{
+      overflow-y: auto!important;
+      height:500px!important;
+      font-family: Consolas,'Liberation Mono',Menlo,Courier,monospace!important;
+      font-size: 13px!important;
+      line-height: 20px!important;
+      border: 1px solid transparent!important;
+    }
+  }
+}
+

@@ -1,0 +1,45 @@
+@import "../../../styles/vars";
+.role{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+      }
+      .min-w-200{
+        min-width: 150px;
+      }
+      .tag{
+        margin-bottom : @gutter-base / 2;
+        cursor: text;
+        .icon{
+          margin : -3px @gutter-base / 2 0 @gutter-base / 2;
+        }
+      }
+    }
+    .icon-hover{
+      .tag-hidden{
+        line-height:26px;
+        height:26px;
+        position:relative;
+        overflow:hidden;
+      }
+      .tag-show{
+        line-height:26px;
+        position:relative;
+        overflow:hidden;
+      }
+      .icon-display{
+        display: block;
+        line-height:26px;
+        height:26px;
+        cursor: pointer;
+      }
+    }
+    .per-title{
+      margin-left:8.33%;
+    }
+  }
+}

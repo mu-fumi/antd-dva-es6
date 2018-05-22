@@ -1,0 +1,59 @@
+@import "../../../styles/vars.less";
+
+.capProgress{
+  //:global{
+  //  .ant-progress-text{
+  //    width : 2.5em;
+  //    margin-left : 0.25em;
+  //  }
+  //}
+  cursor: pointer;
+  .text{
+    width : 4rem;
+  }
+  &.bg-success{
+    :global{
+      .ant-progress-bg{
+        background-color : @success-color
+      }
+      .ant-progress-text{
+        color : @success-color
+      }
+    }
+  }
+  &.bg-primary{
+    :global{
+      .ant-progress-bg{
+        background-color : @primary-color
+      }
+      .ant-progress-text{
+        color : @primary-color
+      }
+    }
+  }
+  &.bg-warning{
+    :global{
+      .ant-progress-bg{
+        background-color : @warning-color
+      }
+      .ant-progress-text{
+        color : @warning-color
+      }
+    }
+  }
+  &.bg-error{
+    :global{
+      .ant-progress-bg{
+        background-color : @error-color
+      }
+      .ant-progress-text{
+        color : @error-color
+      }
+    }
+  }
+  :global{
+    .ant-progress-inner{
+      overflow: hidden;
+    }
+  }
+}

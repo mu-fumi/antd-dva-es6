@@ -1,0 +1,116 @@
+@import "../../../styles/vars";
+@progressNum : 40px;
+.host{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        min-height: @gutter-base * 5;
+      }
+      .mgrb > form{
+        min-width: 0px;
+      }
+      .min-w-130{
+        min-width: 130px;
+      }
+      .min-w-200{
+        min-width: 150px;
+      }
+      .text-cemter{
+        text-align: center;
+      }
+      .tag{
+        margin-bottom :  @gutter-base / 2;
+        cursor: text;
+        .icon{
+          margin : -3px @gutter-base / 2 0 @gutter-base / 2;
+        }
+      }
+      .span-style{
+        color:#2db7f5;
+        cursor:pointer;
+      }
+      .text-ellipsis-1{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        max-width: 300px;
+        cursor:pointer;
+      }
+      .progress-bar{
+        display: inline-block;
+        width : calc( ~"100% - @{progressNum}" );
+      }
+      .progress-number{
+        display: inline-block;
+        width: @progressNum;
+      }
+      .pull-right {
+        float: right;
+      }
+      .mgr-10 {
+        margin-right: 10px;
+      }
+      .line-height-28 {
+        line-height: 28px;
+      }
+      .machine-list .machine, .tag-list .tag {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .tag-list .choose .ant-tag {
+        border-color: #2db7f5;
+      }
+      .min-w-240{
+        min-width: @gutter-base * 30;
+      }
+    }
+  }
+  &.bg-success{
+    :global{
+      .ant-progress-bg{
+        background-color : @success-color
+      }
+      .ant-progress-text{
+        color : @success-color
+      }
+    }
+  }
+  &.bg-primary{
+    :global{
+      .ant-progress-bg{
+        background-color : @primary-color
+      }
+      .ant-progress-text{
+        color : @primary-color
+      }
+    }
+  }
+  &.bg-warning{
+    :global{
+      .ant-progress-bg{
+        background-color : @warning-color
+      }
+      .ant-progress-text{
+        color : @warning-color
+      }
+    }
+  }
+  &.bg-error{
+    :global{
+      .ant-progress-bg{
+        background-color : @error-color
+      }
+      .ant-progress-text{
+        color : @error-color
+      }
+    }
+  }
+  :global {
+    .ant-table-thead > tr > th.text-center{
+      text-align: center;
+    }
+  }
+}

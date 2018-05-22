@@ -1,0 +1,62 @@
+@import "../../../styles/vars.less";
+
+.detail {
+  :global button {
+    margin-left: @gutter-base;
+  }
+	:global .icon-group {
+			position: relative;
+			margin-left: -@gutter-base;
+			text-align: left;
+			& .bg-icon {
+				font-size: 80px;
+				color: #4bd126;
+        &:hover {
+          cursor: pointer;
+        }
+			}
+			& .tool-icon {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				font-size: 40px;
+				color: #fff;
+        &:hover {
+          cursor: pointer;
+        }
+			}
+		}
+	:global .tool-details {
+		padding-top: @gutter-base;
+		& div {
+			margin-bottom: @gutter-base * 2;
+      span span {
+        margin-left: @gutter-base;
+        color: #000;
+      }
+		}
+	}
+	:global .script {
+		margin: @gutter-base*2 0 0 0;
+    .script-label {
+      width: 60px;
+    }
+    .code-mirror {
+      height: auto;
+      border: 1px solid #e1e1e1;
+      border-radius: 4px;
+      font-family: Consolas,'Liberation Mono',Menlo,Courier,monospace;
+      font-size: 13px;
+      line-height: 20px;
+    }
+	}
+  :global .history {
+    margin: @gutter-base*2 0;
+    table {
+      margin-top: @gutter-base*2;
+      .result-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../styles/vars";
+
+.top-filter {
+  background-color: @body-background;
+  min-height: @gutter-base * 5;
+  margin-bottom: @gutter-base * 3;
+  //border-bottom: @border-base;
+  padding: @gutter-base * 3;
+
+  :global .ant-select {
+    min-width: @select-width-base * 1.5; // 不确定以后会不会有名字很长的node，先设置最小值
+  }
+}
+.single-line{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

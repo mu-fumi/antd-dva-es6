@@ -1,0 +1,58 @@
+@import "../../styles/vars";
+.detail{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        padding-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+      }
+      .span-dot{
+        cursor:pointer;
+        border-bottom:@border-width-base dotted #777;
+      }
+      .memo-width{
+        width: 370px;
+      }
+      .min-w-250{
+        min-width: 250px;
+      }
+      .min-w-150{
+        min-width: 150px;
+      }
+      .min-w-100{
+        min-width: 100px;
+      }
+    }
+  }
+}
+.toolTip{
+  :global .ant-tooltip-inner {
+      max-width: 500px!important;
+    }
+}
+.detailLine{
+  margin-bottom:@gutter-base * 5;
+  :global{
+    .left-col{
+      min-height: 30px;
+      line-height: 30px;
+      width: 45%;
+      //border-bottom: 1px dotted #d9d9d9;
+      float: none;
+      display: inline-block;
+      margin-bottom: 5px;
+      margin-right: 10%;
+    }
+    .right-col{
+      min-height: 30px;
+      line-height: 30px;
+      width: 45%;
+      //border-bottom: 1px dotted #d9d9d9;
+      float: none;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+}

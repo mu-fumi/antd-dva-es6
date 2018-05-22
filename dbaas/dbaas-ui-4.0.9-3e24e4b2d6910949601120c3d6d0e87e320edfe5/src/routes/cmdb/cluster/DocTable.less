@@ -1,0 +1,33 @@
+@import '../../../styles/vars.less';
+
+@border-color : #cbd2db;
+
+.table-responsive{
+  width : 100%
+}
+.table-bordered{
+  border : 1px solid @border-color;
+  tr{
+    td{
+      padding : @gutter-base / 2 @gutter-base ;
+      border-bottom : 1px solid @border-color;
+    }
+    td:nth-child(2){
+      border-left : 1px solid @border-color;
+    }
+  }
+  tr:last-child{
+    td{
+      border-bottom: 0;
+    }
+  }
+}
+.mgr-8{
+  margin-right : @gutter-base;
+}
+.break-all{
+  word-break: break-all;
+}
+
+
+

@@ -1,0 +1,21 @@
+@import "../../styles/vars.less";
+
+.performance {
+  margin: -24px;
+  background: @background-color-base !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  :global {
+    .ant-card{
+      border-radius:0;
+      margin-bottom: @gutter-base * 2;
+    }
+    .card-title h3 span {
+      font-size: @font-size-base;
+      margin-left: @gutter-base;
+      color: @text-color-secondary;
+    }
+  }
+}
+
+

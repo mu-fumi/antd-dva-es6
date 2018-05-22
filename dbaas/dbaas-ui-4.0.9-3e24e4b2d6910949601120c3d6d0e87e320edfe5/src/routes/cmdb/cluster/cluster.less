@@ -1,0 +1,32 @@
+@import "../../../styles/vars";
+@progressNum : 40px;
+.cluster{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      //padding: @gutter-base * 2;
+      margin-top : @gutter-base * 1.5;
+      box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+      //min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        //min-height: @gutter-base * 5;
+        //border-bottom: @border-width-base @border-style-base @border-color-base;
+      }
+    }
+    .ant-table-thead > tr > th.text-center{
+      text-align: center;
+    }
+  }
+  .name-container{
+    max-width : 400px;
+  }
+  .name{
+    max-width : calc(~"100% - 20px");
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}

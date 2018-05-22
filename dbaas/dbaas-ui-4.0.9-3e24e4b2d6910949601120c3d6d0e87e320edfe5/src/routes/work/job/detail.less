@@ -1,0 +1,95 @@
+@import "../../../styles/vars";
+.detail{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        margin-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+        ul li{
+          margin-bottom:5px;
+          display:inline-block;
+          height:@gutter-base * 4;
+          line-height:@gutter-base * 4;
+        }
+        .li-left{
+          margin-right:10%;
+          width:45%;
+          border-bottom: @table-border-dotted;
+        }
+        .li-right{
+          width:45%;
+          border-bottom: @table-border-dotted;
+          &.last-li {
+            border-bottom: none;
+          }
+        }
+        .li-whole{
+          width:100%;
+          height:auto;
+          .table-style {
+            border: @table-border-solid;
+            padding: @gutter-base @gutter-base * 2;
+            text-align: left;
+          }
+          .ant-collapse {  // border改为跟老版本一致（lizzy）
+            border: @table-border-solid;
+            &> .ant-collapse-item {
+              border-bottom: none;
+            }
+          }
+        }
+        .retry-button {  // 重试（lizzy）
+          float: right;
+          margin-top: @gutter-base * 2 - 5px;
+        }
+        .jobShowPre,.jobShowPre span {
+          word-break: normal;
+          word-wrap: break-word;
+          white-space: pre-wrap!important;
+          word-wrap: break-word!important;
+        }
+        .display table thead {
+          display: none
+        }
+      }
+    }
+
+    .panel {
+      margin-bottom: 20px;
+      border: 1px solid @border-color-old;
+      border-radius: @border-radius-base * 2;
+      .table {
+        margin-bottom: 0;
+        border: 0;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        line-height: 30px;
+        td, th {
+          border: 1px solid @border-color-old;
+          padding: @gutter-base @gutter-base * 2;
+          text-align: left;
+        }
+        td {
+          border-left: none;
+          border-bottom: none;
+        }
+        tr:first-child>td {
+          border-top: 0;
+          border-bottom: 0;
+        }
+        tr>td:last-child {
+          border-right: 0;
+        }
+      }
+    }
+    .ant-table-placeholder{
+      border-bottom: none;
+    }
+    ul{
+      -webkit-padding-start: 0;
+    }
+  }
+}

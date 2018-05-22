@@ -1,0 +1,67 @@
+@import "../../../styles/vars";
+.detail{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        padding-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+        border-bottom: @border-width-base @border-style-base @border-color-base;
+      }
+    }
+  }
+}
+
+.basic{
+  padding: 0 20px;
+  :global{
+    .trend-icon{
+      color:#48c0f6;
+      cursor: pointer;
+      margin:0 0 2.5px 4px;
+    }
+    margin-bottom:@gutter-base * 5;
+    .left-col{
+      min-height: 30px;
+      line-height: 30px;
+      float: none;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .right-col{
+      min-height: 30px;
+      line-height: 30px;
+      float: none;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .text-notinit{
+      color:#9facbd;
+    }
+  }
+}
+
+.extend{
+  padding: 0 20px;
+  :global{
+    margin-bottom:@gutter-base * 5;
+    .left-col{
+      min-height: 30px;
+      line-height: 30px;
+      float: none;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .right-col{
+      min-height: 30px;
+      line-height: 30px;
+      float: none;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .ant-table-thead > tr > th.text-center{
+      text-align: center;
+    }
+  }
+}

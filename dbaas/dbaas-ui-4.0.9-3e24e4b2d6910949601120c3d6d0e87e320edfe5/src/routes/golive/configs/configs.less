@@ -1,0 +1,30 @@
+@import "../../../styles/vars";
+.configs{
+  :global{
+    .inner-cont{
+      background: @body-background;
+      min-height: calc(100vh - 184px);
+      .mgrb{
+        padding-bottom: @gutter-base * 2;
+        min-height: @gutter-base * 5;
+      }
+      .text-ellipsis-1{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+      .table-style{
+        border:1px solid #cbd2db;
+        td{
+          border:1px solid #cbd2db;
+          border-top: 0;
+          border-left: 0;
+        }
+      }
+      .pointer{
+        cursor: pointer;
+      }
+    }
+  }
+}

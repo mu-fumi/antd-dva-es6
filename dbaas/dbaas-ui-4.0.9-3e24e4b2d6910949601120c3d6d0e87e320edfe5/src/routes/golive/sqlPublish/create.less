@@ -1,0 +1,168 @@
+@import "../../../styles/vars.less";
+
+.create {
+  width: 85%;
+  :global  {
+    .upload {
+      .upload-file {
+        margin-top: @gutter-base * 3;
+      }
+      .edit {
+        margin-top: @gutter-base * 3;
+        margin-bottom: @gutter-base * 3;
+      }
+      .code-mirror {
+        height: auto;
+        border: 1px solid #e1e1e1;
+        border-radius: @border-radius-base;
+        font-family: Consolas,'Liberation Mono',Menlo,Courier,monospace;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      .result {
+        &.backup-info {
+          //margin: @gutter-base * 2;
+          //margin-left: calc(~"1/6*100% - 97px");  // less中会把calc整体计算为百分比，要阻止此行为就要加~
+        }
+        pre {
+          margin-top: @gutter-base;
+          font-size: @font-size-base;
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+        }
+        .ant-alert-with-description .ant-alert-message {
+          font-size: @font-size-base;
+        }
+      }
+      .tool-tip {
+        margin-top: @gutter-base * 2;
+        margin-bottom: @gutter-base * 2;
+        font-size: @font-size-sm;
+        &.remarks {
+          margin-top: -@gutter-base;
+          margin-bottom: 0;
+        }
+        &.backup {  // 备份页面左侧边距
+          margin-left: calc(~"1/6*100% - 97px");
+        }
+        .anticon {
+          color: @warning-color;
+          margin-right: @gutter-base;
+        }
+        .tip-content {
+          margin-left: 20px;  // 灯泡的宽度
+        }
+        .sentence {
+          margin-top: @gutter-base;
+          li {
+            margin-left: @gutter-base;
+          }
+        }
+      }
+      .ant-select {
+        min-width: @select-width-base * 2.5; // 不确定以后会不会有名字很长的node，先设置最小值
+      }
+      .select-table {
+        margin: @gutter-base * 2;
+        .title {
+          margin: @gutter-base * 3 0;
+          color: @heading-color;
+          font-size: @font-size-base;
+          &.backup-type {
+            margin-top: -@gutter-base * 3;
+          }
+        }
+        .ant-radio-group {
+          margin-left: 9%;
+          span {
+            font-size: @font-size-base + 1px;
+          }
+        }
+      }
+      .ant-form-item {
+        margin-bottom: @gutter-base * 2;
+      }
+      .add-table.ant-form-item > .ant-form-item, .add-table.ant-form-item :not(.ant-form) > .ant-form-item {  // 覆盖form中form的负mgb
+        margin-bottom: @gutter-base * 2;
+      }
+
+      &.publish {  // 发布页
+        //.title {
+        //  margin-top: @gutter-base * 2;
+        //  font-size: @font-size-base + 2px;
+        //  color: @heading-color;
+        //}
+        //.label {
+        //  margin-top: @gutter-base;
+        //  span {    // 注意层级，不要覆盖codemirror里的span，会影响高亮
+        //    color: @heading-color;
+        //  }
+        //}
+        //.buttons {
+        //  margin-top: @gutter-base * 2;
+        //}
+        .rollback-info {
+          margin-top: @gutter-base * 4;
+          .ant-card-wider-padding .ant-card-body {
+            padding: @gutter-base * 2;
+          }
+        }
+        .ant-tabs {
+          margin-left: @gutter-base * 2;
+        }
+        .ant-alert {
+          margin: @gutter-base * 2 0;
+        }
+      }
+      // 以下是备份页
+      .selected-instance {
+        margin-bottom: @gutter-base * 2;
+      }
+      .select-system-table {
+        //float: left;
+        width: 100%;
+        border: 1px solid @border-color-split;
+        padding: @gutter-base;
+        margin: @gutter-base * 2 0;
+      }
+      .single-row {
+        margin-bottom: @gutter-base * 2;
+        //float: left;
+        //width: calc(~"100% - 126px");
+        //span {
+        //  color: @heading-color;
+        //}
+      }
+      .instance-table {
+        clear: both;
+      }
+      .select-backup-type {
+        margin: @gutter-base * 2 0;
+      }
+      .backup-button-margin {
+        margin-top: @gutter-base * 2;
+      }
+    }
+  }
+}
+
+.rollback-modal {
+  :global .label {
+    margin: @gutter-base 0;
+  }
+}
+
+.show-more {
+  /*overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap*/;
+  /* display: inline-block;
+   width: 300px;*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

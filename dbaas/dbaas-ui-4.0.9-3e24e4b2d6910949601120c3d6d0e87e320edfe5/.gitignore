@@ -1,0 +1,11 @@
+dist
+node_modules
+yarn.lock
+.DS_Store
+npm-debug.log
+npm start.bat
+npm run build.bat
+yarn-error.log
+.vscode
+.idea
+.nyc_output

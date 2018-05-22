@@ -1,0 +1,43 @@
+@import '../../../styles/vars.less';
+
+.sql-publish {
+  :global .ant-form .ant-row-flex-middle {
+    div:nth-child(3), div:nth-child(4) {
+      margin-top: -2px;
+    }
+  }
+  :global .tips {
+    .anticon-bulb {
+      color: @warning-color;
+      margin-right: @gutter-base;
+    }
+    .sorter {
+      margin-left: @gutter-base;
+    }
+  }
+
+}
+
+.tooltips {
+  :global .ant-tooltip-inner {
+    max-width: 500px;
+    word-break: break-all;
+  }
+  :global .status-tip {  // 多行省略
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}
+
+.query-sql {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

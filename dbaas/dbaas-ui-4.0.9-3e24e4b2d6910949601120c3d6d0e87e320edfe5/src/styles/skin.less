@@ -1,0 +1,188 @@
+@import "./vars.less";
+@import "./nprogress.less";
+
+::-webkit-scrollbar-thumb {
+  background-color: @scrollbar-background-color;
+}
+
+::-webkit-scrollbar {
+  width: @gutter-base;
+  height: @gutter-base;
+}
+a{
+  color: @navy-6;
+}
+
+:global{
+  .iconfont {
+    width: 1em; height: 1em;
+    fill: currentColor;
+    overflow: hidden;
+    -webkit-text-stroke-width: 1.2px;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .pageBtn{
+    display: inline-block;
+    cursor: pointer;
+    margin-right: @gutter-base;
+    padding :  @gutter-base / 2 @gutter-base;
+    font-size : @gutter-base * 2;
+    .anticon {
+      margin-right: @gutter-base;
+      margin-top: -(@gutter-base / 2);
+    }
+    &:hover{
+      background-color : @blue-1;
+      border-radius : @gutter-base / 4;
+    }
+  }
+  .clear {
+    overflow: hidden;
+  }
+  .pull-right {
+    float: right;
+  }
+
+  .pull-left {
+    float: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+  .text-info{
+    color: @info-color;
+  }
+  .text-success{
+    color: @success-color;
+  }
+  .text-error{
+    color: @error-color;
+  }
+  .text-warning{
+    color: @warning-color;
+  }
+  .text-muted{
+    color: @normal-color;
+  }
+  .text-caption{
+    color: @text-color-secondary;
+  }
+
+  .text-bold{
+    font-weight: bolder;
+  }
+  .text-bold-italic{
+    font-weight: bolder;
+    font-style: italic;
+  }
+  .wrap-break {
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  .star { // 模拟必选的star
+    display: inline-block;
+    //margin-right: 4px;
+    content: "*";
+    font-family: SimSun;
+    line-height: 1;
+    font-size: @font-size-base;
+    color: #f04134;
+  }
+  .mgt-16 {
+    margin-top: @gutter-base * 2;
+  }
+  .mgr-16 {
+    margin-right: @gutter-base * 2;
+  }
+  .mgb-16 {
+    margin-bottom: @gutter-base * 2;
+  }
+  .mgl-16 {
+    margin-left: @gutter-base * 2;
+  }
+  .mgt-8 {
+    margin-top: @gutter-base;
+  }
+  .mgr-8 {
+    margin-right: @gutter-base;
+  }
+  .mgb-8 {
+    margin-bottom: @gutter-base;
+  }
+  .mgl-8 {
+    margin-left: @gutter-base;
+  }
+  .mgr-4 {
+    margin-right: @gutter-base / 2;
+  }
+  // antd 3版本引起的样式变化
+  .ant-divider {
+    margin: 0 6px;
+    display: inline-block;
+    height: @gutter-base;
+    width: 1px;
+    background: #ccc;
+  }
+  .ant-tag {
+    font-size: @font-size-base;
+  }
+  .ant-table-small > .ant-table-content > .ant-table-body > table {
+    padding: 0 0;
+  }
+  .ant-table.ant-table-bordered .ant-table-title {
+    padding-left: @gutter-base;
+  }
+  .ant-menu-vertical .ant-menu-item {  //  抵消antd3自带margin
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .ant-menu-vertical .ant-menu-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  //
+
+
+
+  .@{menu-prefix-cls} {
+    &-item,
+    &-submenu-title {
+      padding: @layout-header-padding;
+    }
+    &-item-group {
+      & .@{menu-prefix-cls}-item > a{
+        display: inline-block;
+      }
+    }
+  }
+  .@{calendar-prefix-cls} {
+    & &-ok-btn{
+      line-height: @line-height-base;
+    }
+  }
+
+  .vertical-middle{
+    vertical-align: middle;
+  }
+}
